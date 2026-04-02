@@ -1,0 +1,115 @@
+.random{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.letter{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(30, 243, 2);
+    font-size: 20px;
+    text-align: center;
+    gap: 10px;
+}
+.letter input {
+    font-size: 20px;
+    background-color: rgb(30, 243, 2);
+    color: white;
+}
+.letter h2{
+    color: wheat;
+}
+.letter button{
+    font-size: 20px;
+    background-color: whitesmoke;
+    color: green;
+}
+
+.cash{
+    width: 100%;
+    height: 450px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-end;
+    background-color: rgb(1, 1, 52);
+    color: wheat;
+    font-size: 20px;
+}
+.cash .buttons{
+    width: 250px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+.speed{
+    width: 100%;
+    height: 450px;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+.speed button{
+    font-size: 20px;
+    margin: 10px;
+    background-color: black;
+    color: whitesmoke;
+}
+.speed button:hover{
+    background-color: blue;
+    color: whitesmoke;
+}
+.fruits{
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+.fruits h2{
+    font-size: 35px;
+}
+.fruits  button{
+    text-align: center;
+    margin: 30px;
+    font-size: 25px;
+    background-color: blue;
+    color: wheat;
+}
+.fruits .images {
+    display: flex;
+    justify-content: center;
+}
+.fruits .images img{
+    width: 200px;
+    padding: 10px;
+}
+.fruits  button:hover{
+    background-color: green;
+    color: wheat;
+}
+.hide{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    background-color: rgb(231, 67, 182);
+}
+.hideshow{
+    width: 100%;
+    height: 50px;
+    border: 2px;
+    text-align: center;
+    background-color: blueviolet;
+}
+.emoji{
+    border: 2px solid black;
+    background-color: palevioletred;
+    text-align: center;
+    font-size: 20px;
+}

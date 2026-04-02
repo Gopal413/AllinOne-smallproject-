@@ -1,0 +1,143 @@
+/* .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.theme-section {
+  background: #e8f5e9;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.weather-section {
+  background: #e8f5e9;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.counter-section {
+  background: #e3f2fd;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.profile-section {
+  background: #f3e5f5;
+  padding: 20px;
+  border-radius: 10px;
+  
+}
+.section{
+  background: #f3e5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px 10px rgb(161, 134, 97);
+  font-size: 20px;
+} */
+
+/* General Reset & Background */
+
+:root {
+  --primary: #6366f1;
+  --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --text: #1e293b;
+}
+
+.app-container {
+  min-height: 100vh;
+  background: var(--bg-gradient);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Navigation Bar */
+.top-nav {
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  padding: 1rem 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 0 20px;
+  scrollbar-width: none; /* Hide scrollbar for Chrome/Safari */
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  border: none;
+  background: #f1f5f9;
+  color: #64748b;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: #e2e8f0;
+}
+
+.nav-btn.active {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+}
+
+/* Display Area */
+.display-area {
+  flex-grow: 1;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.component-window {
+  width: 100%;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  animation: slideUp 0.4s ease-out;
+}
+
+/* Smooth Entrance Animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.floating-theme {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}

@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(14, 219, 185);
+}
+
+.display{
+    width: 450px;
+    border:2px solid black;
+    height: 150px;
+   
+    display: flex;
+    background-color: whitesmoke;
+    margin: 30px;
+    border-radius: 100px;
+    padding: 10px;
+}
+.display img{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    padding: 20px 20px 10px 0;
+}
+.display h2,h1{
+    display: inline;
+    align-items: center;
+    padding: 10px;
+    font-size: 40px;
+    color: rgb(3, 74, 255);
+
+}
+.display p{
+   margin-left: 85px;
+   font-size: 25px;
+   
+   color: grey;
+}

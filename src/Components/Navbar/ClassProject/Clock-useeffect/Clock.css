@@ -1,0 +1,28 @@
+.app-container{
+    background-color: rgb(6, 6, 43);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: wheat;
+    font-size: 20px;
+    gap: 10px;
+}
+.app-container button{
+    font-size: 25px;
+    background-color: blue;
+    color: wheat;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+}
+.app-container div{
+    background-color: white;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    color: black;
+    border-radius: 50px;
+}

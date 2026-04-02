@@ -1,0 +1,102 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Page Background */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Main Card */
+.emoji {
+  width: 100%;
+  max-width: 450px;
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: 0.3s ease;
+}
+.emoji-wrapper {
+  min-height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.emoji:hover {
+  transform: translateY(-5px);
+}
+
+/* Heading */
+.emoji h2 {
+  font-size: 20px;
+  margin-bottom: 25px;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* Emoji Buttons */
+.emoji div button {
+  font-size: 28px;
+  margin: 10px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 12px;
+  background: #f1f3ff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.emoji div button:hover {
+  background: #667eea;
+  color: white;
+  transform: scale(1.2);
+}
+
+/* Selected Feedback Button */
+.emoji > button {
+  font-size: 40px;
+  padding: 15px 20px;
+  border-radius: 15px;
+  border: none;
+  background: #667eea;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* Thank You Text */
+.emoji p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2ecc71;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .emoji {
+    padding: 25px 20px;
+  }
+
+  .emoji h2 {
+    font-size: 18px;
+  }
+
+  .emoji div button {
+    font-size: 24px;
+    padding: 10px 14px;
+  }
+}
