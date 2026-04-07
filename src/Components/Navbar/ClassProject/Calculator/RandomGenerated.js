@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import "../ClassStyle.css";
+//import "../ClassStyle.css";
+import "./RandomGenerated.css"
 
 function RandomGenerated() {
 
@@ -14,9 +15,10 @@ function RandomGenerated() {
 
   return (
     <div className='random'>
-      <h1>RandomNumber Generate</h1><br />
+      <h1>Random Number Generate</h1><br />
+      <span>{numberval}</span>
       <button onClick={randomfunc}>Generate</button>
-      {numberval}
+      
     </div>
   )
 }

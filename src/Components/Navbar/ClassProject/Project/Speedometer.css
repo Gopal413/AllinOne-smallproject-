@@ -1,0 +1,51 @@
+.speed {
+  background: #1ec415;
+  border-radius: 20px;
+  padding: 22px 24px;
+  text-align: center;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+.speed h1 {
+  letter-spacing: 1px;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.speed h3 {
+  font-size: 28px;
+  color: #2563eb;
+}
+.speed p {
+  font-size: 25px;
+    color: #caf203;
+  margin-bottom: 12px;
+}
+.speed img {
+  width: 260px;
+  height: 150px;
+  border-radius: 25px;
+  margin: 10px auto 18px;
+  display: block;
+}
+.speed button {
+  padding: 8px 20px;
+  margin: 0 8px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+}
+.speed button:first-of-type {
+  font-size: 20px;
+  background: #10b981;
+}
+.speed button:first-of-type:hover{
+    background: #05fdf0;
+}
+.speed button:last-of-type {
+    font-size: 20px;
+    background: #f97373;
+}
+.speed button:last-of-type:hover{
+    background: #f40a92;
+}

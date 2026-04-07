@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import "./Counter.css";
 
 function Counter() {
 
@@ -22,14 +23,14 @@ function Counter() {
     }
 
   return (
-    <div>
-        <div style={{border:"2px" ,backgroundColor:"lightblue",width: "90%",height:"200px",margin:"20px", textAlign:"center" ,bottom:"50px"}}>
-            <h3 style={{color:"violet",fontSize:"30px"}}>Counter App</h3>
-            <p style={{fontSize:"30px",color:"red"}} >{count}</p>
+    <div className="counter-card">
+        <div>
+            <h3>Counter App</h3>
+            <p>{count}</p>
             
-            <button style={{padding:"5px", margin:"5px"}} onClick={increment}>Increment</button>
-            <button style={{padding:"5px", margin:"5px"}} onClick={decrement}>Decrement</button>
-            <button style={{padding:"5px", margin:"5px"}} onClick={()=>setCount(prevalue=>(prevalue=0))}>Reset</button>
+            <button onClick={increment}>Increment</button>
+            <button onClick={decrement}>Decrement</button>
+            <button onClick={()=>setCount(prevalue=>(prevalue=0))}>Reset</button>
            
         </div>
       

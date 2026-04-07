@@ -1,4 +1,4 @@
-body{
+/* body{
     background-color: rgb(14, 219, 185);
 }
 
@@ -32,4 +32,56 @@ body{
    font-size: 25px;
    
    color: grey;
+} */
+
+
+/* HeaderEx.css */
+
+/* Reset list bullet and spacing where this is used */
+li {
+  list-style: none;
+}
+
+/* Card wrapper – matches UserProfiles design */
+.display {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: #0d8aea;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.display:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.26);
+}
+
+/* Avatar */
+.display img {
+  width: 100px;
+  height: 54px;
+  border-radius: 70%;
+  object-fit: cover;
+  border: 2px solid #4e5cf5;
+  flex-shrink: 0;
+}
+
+/* Text block */
+.display h2 {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 0 0 2px;
+}
+.display h1 {
+  font-size: 16px;
+  margin: 0;
+  color: #0f172a;
+  text-transform: capitalize;
+}
+.display p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #6b7280;
 }

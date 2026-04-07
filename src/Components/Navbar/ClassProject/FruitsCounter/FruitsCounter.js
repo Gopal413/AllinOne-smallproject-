@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import "../ClassStyle.css";
+//import "../ClassStyle.css";
+import "./FruitsCount.css"
 
 function FruitsCounter() {
     const [mango ,setmango] = useState(0);

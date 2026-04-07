@@ -1,0 +1,33 @@
+.random {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background: #6ee5fd;
+  border-radius: 18px;
+  padding: 22px;
+  text-align: center;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.15);
+}
+.random h1 {
+  font-size: 28px;
+  color: #fd0570;
+}
+.random button {
+  margin-top: 5px;
+  padding: 8px 20px;
+  border-radius: 999px;
+  border: none;
+  background: #4ea4f5;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.random span{
+  font-size: 28px;
+  color: goldenrod;
+  position: relative;
+  bottom: 20px;
+  font-weight: 700;
+}

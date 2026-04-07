@@ -1,4 +1,4 @@
-/* Reset */
+/* Reset
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* Page Wrapper */
+
 .page-wrapper {
   min-height: 100vh;
   width: 100%;
@@ -18,7 +18,7 @@
   padding: 20px;
 }
 
-/* Main Card */
+
 .cash {
   width: 100%;
   max-width: 420px;
@@ -29,7 +29,7 @@
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
-/* Title */
+
 .cash h2 {
   text-align: center;
   margin-bottom: 10px;
@@ -37,7 +37,7 @@
   color: #333;
 }
 
-/* Balance */
+
 .balance {
   text-align: center;
   font-weight: 600;
@@ -46,12 +46,12 @@
   font-size: 16px;
 }
 
-/* Section */
+
 .section {
   margin-bottom: 30px;
 }
 
-/* Section Title */
+
 .section-title {
   font-size: 14px;
   font-weight: 600;
@@ -59,7 +59,7 @@
   color: #444;
 }
 
-/* Input */
+
 .cash input {
   width: 100%;
   height: 42px;
@@ -72,7 +72,7 @@
   font-size: 14px;
 }
 
-/* Submit Button */
+
 .submit-btn {
   width: 100%;
   height: 42px;
@@ -102,7 +102,7 @@
   background: #27ae60;
 }
 
-/* Amount Buttons */
+
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -125,7 +125,6 @@
   transform: scale(1.05);
 }
 
-/* Responsive */
 @media (max-width: 480px) {
   .cash {
     padding: 20px;
@@ -133,5 +132,190 @@
 
   .buttons {
     grid-template-columns: repeat(2, 1fr);
+  }
+} */
+
+/* index.css – Cash Withdraw / Deposit */
+
+.page-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.cash {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  border-radius: 24px;
+  padding: 24px 26px;
+  background: radial-gradient(circle at top left, #0f172a, #020617);
+  box-shadow:
+    0 22px 48px rgba(15, 23, 42, 0.8),
+    0 0 0 1px rgba(148, 163, 184, 0.4);
+  color: #e5e7eb;
+  position: relative;
+  overflow: hidden;
+}
+
+/* glow */
+.cash::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background:
+    radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.38), transparent 55%),
+    radial-gradient(circle at 100% 100%, rgba(34, 197, 94, 0.4), transparent 60%);
+  opacity: 0.9;
+  z-index: 0;
+}
+.cash > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* header */
+.cash h2 {
+  font-size: 22px;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+.cash .balance {
+  font-weight: 700;
+  font-size: 18px;
+  color: #facc15;
+  margin-bottom: 16px;
+}
+
+/* sections */
+.section {
+  margin-top: 10px;
+  padding: 14px 0 4px;
+  border-top: 1px solid rgba(148, 163, 184, 0.45);
+}
+.section-title {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #cbd5f5;
+  margin-bottom: 8px;
+}
+
+/* inputs */
+.cash input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.8);
+  background: rgba(15, 23, 42, 0.75);
+  color: #e5e7eb;
+  outline: none;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* submit buttons */
+.submit-btn {
+  width: 100%;
+  padding: 9px 0;
+  border-radius: 999px;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  color: #0f172a;
+  box-shadow:
+    0 12px 26px rgba(15, 23, 42, 0.85),
+    0 0 0 1px rgba(248, 250, 252, 0.75);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+}
+.withdraw-btn {
+  background: linear-gradient(135deg, #fb7185, #ef4444);
+}
+.deposit-btn {
+  background: linear-gradient(135deg, #4ade80, #22c55e);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.03);
+  box-shadow:
+    0 16px 34px rgba(15, 23, 42, 0.9),
+    0 0 0 1px rgba(248, 250, 252, 0.9);
+}
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* small amount buttons */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 4px;
+}
+.buttons button {
+  padding: 7px 0;
+  border-radius: 999px;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #e5e7eb;
+  background: rgba(15, 23, 42, 0.8);
+  box-shadow:
+    0 10px 22px rgba(15, 23, 42, 0.9),
+    0 0 0 1px rgba(148, 163, 184, 0.7);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+/* different colours per column */
+.buttons button:nth-child(1) {
+  background: rgba(59, 130, 246, 0.9);
+}
+.buttons button:nth-child(2) {
+  background: rgba(96, 165, 250, 0.9);
+}
+.buttons button:nth-child(3) {
+  background: rgba(52, 211, 153, 0.9);
+}
+.buttons button:nth-child(4) {
+  background: rgba(249, 115, 22, 0.9);
+}
+
+.buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 14px 30px rgba(15, 23, 42, 1),
+    0 0 0 1px rgba(248, 250, 252, 0.9);
+}
+
+/* floating animation */
+.cash {
+  animation: cash-float 6s ease-in-out infinite;
+}
+@keyframes cash-float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* responsive */
+@media (max-width: 480px) {
+  .cash {
+    padding: 20px 18px;
+  }
+  .buttons {
+    gap: 8px;
+  }
+  .buttons button {
+    font-size: 12px;
   }
 }

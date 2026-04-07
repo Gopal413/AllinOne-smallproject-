@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import "./Googlesearch.css"
 
 function GoogleSearch() {
     const [search , setSearch] = useState("")
@@ -18,10 +19,10 @@ function GoogleSearch() {
     )
 
   return (
-    <div>
+    <div className="google-search">
       <div>
         <h2>Google Search</h2>
-        <input style={{width:"100%",borderRadius:"10px"}} type="text" onChange={changefunc} onClick={()=>setres(true)} onMouseEnter={()=>setres(false)}/>
+        <input  type="text" onChange={changefunc} onClick={()=>setres(true)} onMouseEnter={()=>setres(false)}/>
        
 
         {res?getStore.map((value,index)=>(

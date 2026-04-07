@@ -1,7 +1,6 @@
 
 import "./ProjectComponent.css";
-import SwitchTheme from "./MyProject/SwitchTheme";
-import WeatherApi from "./MyProject/WeatherApi";
+
 import Counter from "./MyProject/Counter";
 import UserProfiles from "./Navbar/UserProfile/UserProfiles";
 import RandomGenerated from "./Navbar/ClassProject/Calculator/RandomGenerated";
@@ -10,24 +9,28 @@ import CassWithdraw from "./Navbar/ClassProject/CashWithdraw/CassWithdraw";
 import CountEvenAndOdd from "./Navbar/ClassProject/EvenOdd/CountEvenAndOdd";
 import Speedometer from "./Navbar/ClassProject/Project/Speedometer";
 import FruitsCounter from "./Navbar/ClassProject/FruitsCounter/FruitsCounter";
-//import HideComponent from "./Navbar/ClassProject/ShowHide/HideComponent";
-//import LoginLogout from "./Navbar/ClassProject/Project/LoginLogout";
 import SimpleTodoList from "./Navbar/ClassProject/TodoList/SimpleTodoList";
 import GoogleSearch from "./Navbar/ClassProject/Serach/GoogleSearch";
 import Feedback from "./Navbar/ClassProject/FeedBack/Feedback";
 
 
 import React, { useState } from 'react';
+import Clock from "./Navbar/ClassProject/Clock-useeffect/Clock";
 
 const ProjectComponent = () => {
  
   const [activeTab, setActiveTab] = useState('Weather');
+  const [theme , setTheme] = useState("Light");
+
+  const switchfun = ()=>{
+    setTheme(theme==="Dark"?"Light":"Dark")
+  }
 
   const menuItems = [
-    { id: 'Weather', component: <WeatherApi />, label: 'Weather' },
+    { id: 'Todo', component: <SimpleTodoList />, label: 'Tasks' },
     { id: 'Profile', component: <UserProfiles />, label: 'Profile' },
     { id: 'Counter', component: <Counter />, label: 'Counter' },
-    { id: 'Todo', component: <SimpleTodoList />, label: 'Tasks' },
+    { id: 'Clock', component: <Clock />, label: 'Clock' },
     { id: 'Stats', component: <CountEvenAndOdd />, label: 'EvenOdd' },
     { id: 'Speed', component: <Speedometer />, label: 'Speed' },
     { id: 'Finance', component: <CassWithdraw />, label: 'Withdraw' },
@@ -40,14 +43,15 @@ const ProjectComponent = () => {
   ];
 
   return (
-    <div className="app-container">
+    <div className="app-container"  style={{backgroundColor:theme==="Light" ?"white":"#1e1e1e"}}>
 
-      <nav className="top-nav">
-        <div className="nav-scroll">
+      <nav className="top-nav" >
+        <div className="nav-scroll" >
           {menuItems.map((item) => (
             <button
               key={item.id}
               className={`nav-btn ${activeTab === item.id ? 'active' : ''}`}
+              style={{backgroundColor:theme==="Light" ?"#1e1e1e":"white"}}
               onClick={() => setActiveTab(item.id)}
             >
               {item.label}
@@ -58,14 +62,14 @@ const ProjectComponent = () => {
 
     
       <main className="display-area">
-        <div className="component-window">
+        <div className="component-window" >
           {menuItems.find((item) => item.id === activeTab)?.component}
         </div>
       </main>
       
     
       <div className="floating-theme">
-        <SwitchTheme />
+        <button onClick={()=>switchfun()}>{theme}</button>
       </div>
     </div>
   );

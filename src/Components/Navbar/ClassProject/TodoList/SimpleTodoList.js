@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
+import "./SimpleTodolist.css"
 
 function SimpleTodoList() {
     const [data,setdata] = useState([
-        {para:"this is react js"},
-        {para:"react is Library"},
-        {para:"react is Library"},
-        {para:"react is Library"},
-        {para:"react is Library"},
-        {para:"react is Library"}])
+        {para:"This is react js"},
+        {para:"React is Library"},
+        {para:"Redux is Library"},
+        {para:"ReduxToolkit is Library"},
+        {para:"Node Js is Backend"},
+        {para:"MongoDB is Database"}])
     //const data =
 
         const deletetoda=(id)=>{
@@ -17,11 +18,11 @@ function SimpleTodoList() {
        
   return (
     <>
-    <div style={{width:"100%",height:"100%",backgroundColor:"lightskyblue",textAlign:"center",margin:"10px", padding:"20px"}}>
+    <div className="simple-todo">
         <h1>Simple Todos</h1>
      
         {data.map((value , ind)=>(
-            <p key={ind} style={{fontSize:"25px"}} >{value.para}<button style={{marginLeft:"20px",fontSize:"18px"}} onClick={()=>deletetoda(ind)}>delete</button></p>
+            <p key={ind}  >{value.para}<button  onClick={()=>deletetoda(ind)}>delete</button></p>
         ))}
     </div>
     </>

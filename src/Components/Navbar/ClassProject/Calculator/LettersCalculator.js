@@ -1,5 +1,5 @@
 import React, {  useState } from 'react'
-import "../ClassStyle.css"
+import "./LetterCount.css"
 
 function LettersCalculator() {
 
@@ -15,7 +15,7 @@ function LettersCalculator() {
 
   return (
     <div className='letter'>
-        <h2>Calculate the Letters you enter</h2>
+        <h2>Calculate the Letters you Enter</h2>
         <input type="text" placeholder='enter the please' value={value} onChange={changeinput}/>
         <button>No of Letters :{value.length}</button>
       

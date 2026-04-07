@@ -4,7 +4,7 @@ import "./Clock.css"
 function Clock() {
 
     const [status,setstatus] = useState(false);
-    const [data,setdata] = useState(new Date());
+    const [data, setdata] = useState(new Date().toLocaleTimeString());
     
 
     useEffect(()=>{
@@ -23,7 +23,7 @@ function Clock() {
     )
     
   return (
-    <div className='app-container'>
+    <div  className="clock-wrapper">
       <button onClick={()=>setstatus(pre=>!pre)}>{status?"Hide Clock ":"Show Clock"}</button>
       {
         status && 

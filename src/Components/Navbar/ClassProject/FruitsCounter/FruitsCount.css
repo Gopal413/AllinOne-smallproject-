@@ -1,0 +1,40 @@
+.fruits {
+  background-color:rgb(144, 8, 255) ;
+  border-radius: 18px;
+  padding: 22px 24px;
+  text-align: center;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+.fruits h2 {
+  font-size: 25px;
+  color: #111827;
+  margin-bottom: 16px;
+}
+.fruits .images {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 14px;
+}
+.fruits img {
+  width: 120px;
+  border-radius: 40px;
+}
+.fruits button {
+  padding: 8px 18px;
+  margin: 4px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: #fff;
+}
+.fruits button:nth-of-type(1) {
+  background: #fbbf24;
+}
+.fruits button:nth-of-type(2) {
+  background: #22c55e;
+}
+.fruits button:nth-of-type(3) {
+  background: #3b72c0;
+}

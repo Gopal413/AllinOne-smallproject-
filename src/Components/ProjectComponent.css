@@ -40,9 +40,9 @@
 
 /* General Reset & Background */
 
-:root {
+/* :root {
   --primary: #6366f1;
-  --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  --bg-gradient: linear-gradient(135deg, #2666c7 0%, #c3cfe2 100%);
   --glass-bg: rgba(255, 255, 255, 0.8);
   --text: #1e293b;
 }
@@ -58,7 +58,7 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* Navigation Bar */
+
 .top-nav {
   width: 100%;
   background: white;
@@ -74,10 +74,11 @@
 
 .nav-scroll {
   display: flex;
+  width: 100%;
   gap: 10px;
-  overflow-x: auto;
-  padding: 0 20px;
-  scrollbar-width: none; /* Hide scrollbar for Chrome/Safari */
+ 
+ 
+  scrollbar-width: none; 
 }
 
 .nav-btn {
@@ -102,7 +103,6 @@
   box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
 }
 
-/* Display Area */
 .display-area {
   flex-grow: 1;
   width: 100%;
@@ -124,7 +124,7 @@
   animation: slideUp 0.4s ease-out;
 }
 
-/* Smooth Entrance Animation */
+
 @keyframes slideUp {
   from {
     opacity: 0;
@@ -140,4 +140,122 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
+} */
+
+/* Layout + background */
+/* body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+  min-height: 100vh;
+} */
+
+.app-container {
+  max-width: 1500px;
+  margin: 20px auto;
+  min-height: 90vh;
+  background: #f5f7fb;
+  border-radius: 28px;
+  padding: 24px;
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top nav */
+.top-nav {
+  border-radius: 32px;
+  padding: 14px 22px;
+  box-shadow: 0 12px 30px rgba(15, 35, 95, 0.18);
+}
+
+.nav-scroll {
+  display: flex;
+  gap: 14px;
+ 
+  overflow-x: auto;
+  padding: 6px 0;
+  scrollbar-width: none;
+}
+.nav-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-btn {
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: 2px solid #e0e4f2;
+  background: #f7f8fc;
+  color: gold;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(35, 57, 120, 0.12);
+}
+.nav-btn:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+}
+.nav-btn.active {
+  background: #4e5cf5;
+  color: #ffffff;
+  border-color: #4e5cf5;
+  box-shadow: 0 12px 25px rgba(78, 92, 245, 0.45);
+}
+
+/* Display card */
+.display-area {
+  flex: 1;
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.component-window {
+  width: 100%;
+  max-width: 960px;
+  min-height: 430px;
+  background: linear-gradient(135deg, #2af598 0%, #009efd 100%);
+  border-radius: 26px;
+  padding: 28px;
+  box-shadow: inset 0 0 0 10px rgba(255, 255, 255, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Floating theme button */
+.floating-theme {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  background: #ffffff;
+  padding: 12px 20px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+.floating-theme button {
+  border: none;
+  outline: none;
+  background: #ff5b5b;
+  color: #ffffff;
+  padding: 10px 26px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .app-container {
+    margin: 10px;
+    padding: 16px;
+  }
+  .component-window {
+    padding: 18px;
+    min-height: 360px;
+  }
 }
