@@ -14,12 +14,19 @@ function RandomGenerated() {
     }
 
   return (
-    <div className='random'>
-      <h1>Random Number Generate</h1><br />
-      <span>{numberval}</span>
-      <button onClick={randomfunc}>Generate</button>
-      
-    </div>
+    
+     <div className='random'>
+      <h1>Random Number Generator</h1>
+      <div className="number-display">
+        <span className="number">{numberval}</span>
+        <div className="number-glow"></div>
+      </div>
+      <button className="generate-btn" onClick={randomfunc}>
+        <span className="ripple"></span>
+        <span>Generate Magic</span>
+        <div className="particles"></div>
+      </button>
+      </div>
   )
 }
 

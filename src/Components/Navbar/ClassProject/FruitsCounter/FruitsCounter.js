@@ -22,14 +22,15 @@ function FruitsCounter() {
 
     <div>
       <div className='fruits'>
-        <h2>Bob ate <span style={{color:"yellow"}}>{mango}</span> mangoes <span style={{color:"yellow"}}>{banana}</span> bananas</h2>
+        <h2>Bob ate <span >{mango}</span> mangoes <span >{banana}</span> bananas</h2>
         <div className='images'>
         <img src="./images/Mango.png" alt="not found" />
         <img src="./images/Banana.png" alt="not found" />
          </div>
+          <div className='btns'>
         <button onClick={counter}>Eat Mango</button>
         <button onClick={count}>Eat Banana</button>
-        <div>
+       
         <button onClick={handlereset}>Reset</button>
         </div>
        

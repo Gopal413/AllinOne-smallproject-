@@ -20,9 +20,10 @@ function Speedometer() {
       <img src="./images/Speedometer.png" alt="not found" />
       <h3>Speed is {speed}mph</h3>
       <p>Min Limit is 0mph, max Limit is 200mph</p>
-      
+      <div className='btns'>
       <button onClick={speedincrement}>Accelerate</button>
       <button onClick={speeddecrement}>Apply Brake</button>
+      </div>
     </div>
   )
 }

@@ -19,7 +19,7 @@ import Clock from "./Navbar/ClassProject/Clock-useeffect/Clock";
 
 const ProjectComponent = () => {
  
-  const [activeTab, setActiveTab] = useState('Weather');
+  const [activeTab, setActiveTab] = useState('Todo');
   const [theme , setTheme] = useState("Light");
 
   const switchfun = ()=>{
@@ -43,33 +43,37 @@ const ProjectComponent = () => {
   ];
 
   return (
-    <div className="app-container"  style={{backgroundColor:theme==="Light" ?"white":"#1e1e1e"}}>
-
-      <nav className="top-nav" >
-        <div className="nav-scroll" >
+   
+     <div className={`app-container ${theme === "Dark" ? "dark-theme" : "light-theme"}`}>
+      <nav className="top-nav">
+        <div className="nav-scroll">
           {menuItems.map((item) => (
             <button
               key={item.id}
               className={`nav-btn ${activeTab === item.id ? 'active' : ''}`}
-              style={{backgroundColor:theme==="Light" ?"#1e1e1e":"white"}}
               onClick={() => setActiveTab(item.id)}
             >
+              <span className="ripple"></span>
               {item.label}
             </button>
           ))}
         </div>
       </nav>
 
-    
       <main className="display-area">
-        <div className="component-window" >
+        <div className="component-window">
           {menuItems.find((item) => item.id === activeTab)?.component}
         </div>
       </main>
-      
-    
+
       <div className="floating-theme">
-        <button onClick={()=>switchfun()}>{theme}</button>
+        <button className="theme-toggle" onClick={switchfun}>
+          <span>{theme}</span>
+          <div className="toggle-sun-moon">
+            <div className="sun"></div>
+            <div className="moon"></div>
+          </div>
+        </button>
       </div>
     </div>
   );

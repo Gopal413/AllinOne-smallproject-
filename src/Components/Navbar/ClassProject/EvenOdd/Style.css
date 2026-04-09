@@ -155,7 +155,7 @@ button:last-of-type:hover {
 /* titles */
 .evenhandle h2,
 .oddhandle h2 {
-  font-size: 15px;
+  font-size: 20px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   margin-bottom: 8px;
@@ -179,7 +179,7 @@ button:last-of-type:hover {
 .evenhandle p,
 .oddhandle p {
   margin: 4px 0 12px;
-  font-size: 8%;
+  font-size: 20px;
   color: #eaeded;
  
 }

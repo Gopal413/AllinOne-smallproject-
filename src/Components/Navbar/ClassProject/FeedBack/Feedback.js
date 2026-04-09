@@ -14,23 +14,24 @@ function Feedback() {
   ));
 
   return (
-    <>
+    
     <div className="emoji-wrapper">
     <div className="emoji">
       {feed ? (
-        <>
-          <button>{feed}</button>
+        <div>
+          <button className="feed">{feed}</button>
           <p>Thank you</p>
-        </>
+          <button onClick={()=>setfeed(null)}>Return</button>
+        </div>
       ) : (
-        <>
+        <div>
           <h2>How Satisfied are you with our Customer Support Performance?</h2>
-          <div>{result ? result : null}</div>
-        </>
+          <div className="emoji">{result ? result : null}</div>
+        </div>
       )}
     </div>
     </div>
-    </>
+   
   );
 }
 

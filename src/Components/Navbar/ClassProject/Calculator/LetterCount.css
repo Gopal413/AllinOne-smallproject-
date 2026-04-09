@@ -1,4 +1,4 @@
-.letter {
+/* .letter {
   width: 100%;
   max-width: 520px;
   margin: 0 auto;
@@ -32,4 +32,171 @@
   background: #10b981;
   color: rgb(234, 73, 9);
   font-weight: 600;
+} */
+
+.letter {
+  min-height: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Cosmic Background Sync */
+.letter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: blur(40px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Title */
+.letter h2 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  background: linear-gradient(45deg, #fff, #f0f0ff, #e0e0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: 0 0 30px rgba(255,255,255,0.5);
+  animation: titleFloat 6s ease-in-out infinite;
+  margin: 0;
+}
+
+/* Input Group */
+.input-group {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(25px);
+  border: 2px solid rgba(255,255,255,0.2);
+  color: #fff;
+  outline: none;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.input-group input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.input-group input:focus {
+  transform: scale(1.02) translateY(-3px);
+  background: rgba(255,255,255,0.22);
+  border-color: rgba(255,255,255,0.5);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4), 0 0 30px rgba(120,119,198,0.4);
+}
+
+.input-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 25px;
+  background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.input-group input:focus + .input-glow {
+  opacity: 1;
+  animation: inputShine 2s infinite;
+}
+
+/* Count Button */
+.count-btn {
+  position: relative;
+  padding: 1.5rem 3rem;
+  border: none;
+  border-radius: 35px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(45deg, rgba(255,107,107,0.3), rgba(255,202,87,0.3));
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255,255,255,0.25);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.count-btn:hover {
+  transform: translateY(-8px) scale(1.08) rotateX(10deg);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.5), 0 0 40px rgba(255,107,107,0.4);
+  background: linear-gradient(45deg, rgba(255,107,107,0.5), rgba(255,202,87,0.5));
+  border-color: rgba(255,255,255,0.5);
+}
+
+.count-btn:active .ripple {
+  animation: rippleAnim 0.6s linear;
+}
+
+.count {
+  font-size: 1.5rem;
+  font-weight: 900;
+  background: linear-gradient(45deg, #fff, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: countPulse 2s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes titleFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes inputShine {
+  0%, 100% { transform: translateX(-100%) scaleX(0); }
+  50% { transform: translateX(100%) scaleX(1); }
+}
+
+@keyframes rippleAnim {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes countPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .letter { padding: 1.5rem; gap: 2rem; }
+  .input-group input { padding: 1.2rem 1.5rem; font-size: 1rem; }
+  .count-btn { padding: 1.2rem 2.5rem; font-size: 1.1rem; }
 }
